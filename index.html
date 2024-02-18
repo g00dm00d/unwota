@@ -20,6 +20,15 @@
         function () {
           (window.vaq = window.vaq || []).push(arguments);
         };
+
+      function preventBack() {
+        window.history.forward();
+      }
+
+      setTimeout(preventBack(), 0);
+      window.onunload = function () {
+        null;
+      };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
   </body>
